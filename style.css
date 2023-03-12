@@ -67,6 +67,8 @@ main{
     font-weight: bold;
 }
 #status{
+    background-color: var(--bg-color);
+    color: white;
     border-radius: 5px;
     border: 1px solid grey;
     padding: 0.5em 1em;
