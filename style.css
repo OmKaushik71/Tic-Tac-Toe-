@@ -78,8 +78,8 @@ main{
     cursor: pointer;
 }
 footer{
-margin-top:auto;
-margin-bottom: 0.5em;
+margin-top: auto;
+margin-bottom: 2em;
 font-size: 1.25rem;
 font-weight: bold;
 }
