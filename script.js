@@ -67,3 +67,10 @@ let renderBoard = function () {
   return { clickHandler };
 };
 renderBoard();
+
+window.addEventListener('DOMContentLoaded', () => {
+  function bottomScroll() {
+    window.scrollTo(0, document.body.scrollHeight);
+  }
+  setTimeout(bottomScroll, 2000);
+});
