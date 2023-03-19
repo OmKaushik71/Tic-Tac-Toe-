@@ -12,14 +12,14 @@
 
 <body>
     <h1>Tic Tac Toe</h1>
-    <button id="status">Vs Player</button>
+    <button onClick="window.location.reload()" class="btn">Restart</button>
     <main>
         <div class="game-board">
-            <div class="square" id="1">X</div>
+            <div class="square" id="1"></div>
             <div class="square" id="2"></div>
             <div class="square" id="3"></div>
             <div class="square" id="4"></div>
-            <div class="square" id="5">O</div>
+            <div class="square" id="5"></div>
             <div class="square" id="6"></div>
             <div class="square" id="7"></div>
             <div class="square" id="8"></div>
@@ -27,6 +27,11 @@
         </div>
     </main>
     <footer>Made by <i>Om Kaushik</i></footer>
+    <div class="gameover">
+        <h1>Game Over</h1>
+        <p><span id="winningPlayer"></span> won the game!</p>
+        <button id="restart" class="btn" onClick="window.location.reload()">Restart</button>
+    </div>
 </body>
 
 </html>

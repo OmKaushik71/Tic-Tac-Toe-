@@ -65,8 +65,23 @@ main{
     font-size: calc(var(--square-size) * 0.8);
     color: var(--orange);
     font-weight: bold;
+    cursor: pointer;
 }
-#status{
+.square.x{
+    background-image: url(./assets/cross.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor:not-allowed;
+}
+.square.o{
+    background-image: url(./assets/circle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor:not-allowed;
+}
+.btn{
     background-color: var(--bg-color);
     color: white;
     border-radius: 5px;
@@ -74,18 +89,47 @@ main{
     padding: 0.5em 1em;
     font-weight: bold;
     font-size: 1.125rem;
-}
-#status:hover, .square:hover{
-    background-color: var(--hover-color);
     cursor: pointer;
 }
-footer{
-margin-top: auto;
-margin-bottom: 2em;
-font-size: 1.25rem;
-font-weight: bold;
+.btn:hover, .square:hover{
+    background-color: var(--hover-color);
 }
-
+footer{
+    margin-top: auto;
+    margin-bottom: 2em;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.gameover{
+    display: none;
+    filter: none;
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%,-50%);
+    border: 1px solid grey;
+    border-radius: 10px;
+    min-width: 350px;
+    width: min(80%,500px);
+    text-align: center; 
+    font-size: 1.25rem;
+    background-color: var(--bg-color);
+    animation: slide 1s ease;
+}
+@keyframes slide {
+    0%{
+        transform: translate(-50%, 10%);
+    }
+    100%{
+        transform: translate(-50%,-50%);
+    }
+}
+.blur{
+    filter: blur(5px);
+}
+.gameover button{
+    margin: 1em auto
+}
 @media (min-height: 700px) and (min-width: 1000px){
     :root{
         --board-size: 450px;
